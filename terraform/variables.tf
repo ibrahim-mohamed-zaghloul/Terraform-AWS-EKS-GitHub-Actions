@@ -46,7 +46,7 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "EC2 keypair"
-  default     = "gitopskey"
+  default     = "gitops-admin"
 }
 
 variable "instance_name" {
