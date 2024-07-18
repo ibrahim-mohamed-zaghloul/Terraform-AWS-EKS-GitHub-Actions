@@ -63,7 +63,7 @@ resource "aws_route_table_association" "rt-association" {
 #   }
 # }
 
-resource "aws_security_group" "security-group" {
+resource "aws_security_group" "security-group2" {
   vpc_id      = aws_vpc.vpc.id
   description = "Allowing SSH Access"
 
