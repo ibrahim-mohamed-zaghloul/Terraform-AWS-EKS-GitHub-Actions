@@ -25,7 +25,7 @@ variable "rt-name" {
 
 variable "sg-name" {
   description = "Security Group for our Jumphost server"
-  default = "Jumphost-sg"
+  default = "Jumphost-sg2"
 }
 
 

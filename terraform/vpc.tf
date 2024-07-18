@@ -41,6 +41,28 @@ resource "aws_route_table_association" "rt-association" {
   subnet_id      = aws_subnet.public-subnet.id
 }
 
+# resource "aws_security_group" "security-group" {
+#   vpc_id      = aws_vpc.vpc.id
+#   description = "Allowing SSH Access"
+
+#   ingress {
+#     from_port   = 22 #SSH
+#     to_port     = 22
+#     protocol    = "tcp"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
+#   egress {
+#     from_port   = 0
+#     to_port     = 0
+#     protocol    = "-1"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
+
+#   tags = {
+#     Name = var.sg-name
+#   }
+# }
+
 resource "aws_security_group" "security-group" {
   vpc_id      = aws_vpc.vpc.id
   description = "Allowing SSH Access"
