@@ -1,16 +1,19 @@
 terraform {
   required_providers {
     aws = {
-        source = "hashicorp/aws"
-        version = ">= 5.25.0"
+      source = "hashicorp/aws"
     }
   }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "depi_final"
 
-  backend "s3" {
-    bucket = "devops-ibrahimzaghloul"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+    workspaces {
+      name = "Terraform-AWS-EKS-GitHub-Actions"
+    }
   }
+}
 
-  required_version = ">= 1.6.3"
+provider "aws" {
+  region = var.region
 }
