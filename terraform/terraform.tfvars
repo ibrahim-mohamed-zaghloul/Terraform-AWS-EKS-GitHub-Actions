@@ -1,6 +1,6 @@
 #provider
 
-region = "us_east_1"
+region = "us-east-1"
 
 #ecr
 
